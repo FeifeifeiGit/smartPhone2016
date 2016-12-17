@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ArticleViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 
-
+@property NSManagedObjectContext *myContext;
+@property NSManagedObjectModel *model;
 @end
 

@@ -25,7 +25,7 @@
 @property (strong, nonatomic)
 IBOutlet UIButton *startButton;
 
-
+@property NSManagedObjectContext *myContext;
 
 
 
