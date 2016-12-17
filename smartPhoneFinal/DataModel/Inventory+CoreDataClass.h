@@ -1,5 +1,5 @@
 //
-//  Notes+CoreDataClass.h
+//  Inventory+CoreDataClass.h
 //  smartPhoneFinal
 //
 //  Created by fei Li on 12/16/16.
@@ -10,12 +10,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class ArticleStore;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Notes : NSManagedObject
+@interface Inventory : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Notes+CoreDataProperties.h"
+#import "Inventory+CoreDataProperties.h"

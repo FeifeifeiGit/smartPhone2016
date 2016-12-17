@@ -11,7 +11,8 @@
 #import "ArticleStore+CoreDataProperties.h"
 
 @interface OnePassageViewController ()
-
+-(void)saveNewWord:(NSString*) newWord;
+-(void)popupForRepetition;
 @end
 
 @implementation OnePassageViewController
@@ -61,18 +62,6 @@
     [menu setMenuItems:@[a]];
     [menu update];
     [menu setMenuVisible:YES];
-    }
-
-- (void)aAction{
-    NSLog(@"--aAction--");
-    UITextRange *selectedRange = [_passageView selectedTextRange];
-    NSString *selectedText = [_passageView textInRange:selectedRange];
-    WordsViewController *newWordVC = [[WordsViewController alloc]init];
-    newWordVC.myContext= _myContext;
-    newWordVC.selectedWord = selectedText;
-    newWordVC.selectedArticle  = _selctedPassage;
-    [self presentViewController:newWordVC animated:NO completion:nil];
-    
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender{
@@ -84,6 +73,79 @@
     }
     return result;
 }
+
+
+- (void)aAction{
+    NSLog(@"--aAction--");
+    UITextRange *selectedRange = [_passageView selectedTextRange];
+    _wordToAdd = [_passageView textInRange:selectedRange];
+    UIAlertController* newWordAlert = [UIAlertController alertControllerWithTitle:@"Add a New Word" message:@"Enter notes to your new word." preferredStyle:UIAlertControllerStyleAlert];
+    
+    [newWordAlert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"note";
+        textField.textColor = [UIColor blueColor];
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+    }];
+    
+    UIAlertAction* saveNewWordAction = [UIAlertAction actionWithTitle:@"SAVE" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        NSArray * textfields = newWordAlert.textFields;
+        UITextField * wordfield = textfields[0];
+        [self saveNewWord:wordfield.text];
+    }];
+    
+    
+    [newWordAlert addAction:saveNewWordAction];
+    [self presentViewController:newWordAlert animated:YES completion:nil];
+}
+-(void)saveNewWord:(NSString*) newNote{
+    NSLog(@" saveNewWord is called: newword is %@", _wordToAdd  );
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Inventory"];
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"word = %@",
+                        _wordToAdd];
+    request.predicate = pre;
+    NSError *error = nil;
+    NSArray *emps = [_myContext executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"error");
+    }
+    if([emps count]!=0){
+            NSLog(@"The words already in your inventory");
+            [self popupForRepetition];
+        }else{
+        Inventory *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Inventory" inManagedObjectContext:_myContext];
+        newItem.word = _wordToAdd;
+        newItem.stage = 0;
+        NSDate *currDate = [NSDate date];
+            //change first and last date to test
+        newItem.fisrtDate =currDate;
+        newItem.lastDate = currDate;
+        newItem.note = newNote;
+        newItem.done = NO;
+        newItem.relatedArticle = _selctedPassage;
+        NSError *error = nil;
+        if([_myContext hasChanges]){
+            [_myContext save:&error];
+        }
+        if (error) {
+            NSLog(@"%@",error);
+        }
+            
+        NSLog(@"%@ is added to database, its done is : %d",newItem.word, newItem.done);
+        
+    }
+}
+-(void)popupForRepetition{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
+                                                                   message:@"The Word is in your inventory already."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -94,4 +156,7 @@
 }
 */
 
+- (IBAction)backTowords:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+}
 @end

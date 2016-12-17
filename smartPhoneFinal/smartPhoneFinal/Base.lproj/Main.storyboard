@@ -39,23 +39,6 @@
             </objects>
             <point key="canvasLocation" x="1077.5" y="-454.5"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="gDX-4T-XFR">
-            <objects>
-                <viewController storyboardIdentifier="4" id="v83-Ez-OFs" customClass="AccountViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oxd-Mc-Dtn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="person.png" id="DZH-XH-k9h"/>
-                    <navigationItem key="navigationItem" id="Y8F-Vz-MmE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jyE-Sg-NP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="607.5" y="975.5"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -67,9 +50,9 @@
                         <color key="barTintColor" red="0.77969960059006205" green="0.77969960059006205" blue="0.77969960059006205" alpha="0.61341502568493156" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="1am-Pd-7M7"/>
                         <segue destination="3OL-ym-Tpi" kind="relationship" relationship="viewControllers" id="aWb-Db-dfy"/>
-                        <segue destination="v83-Ez-OFs" kind="relationship" relationship="viewControllers" id="gRL-RH-Vkt"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="1am-Pd-7M7"/>
+                        <segue destination="CaF-QU-Ohy" kind="relationship" relationship="viewControllers" id="P3q-qa-o2c"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -126,6 +109,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gh-ZM-Ayl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1731.5" y="410.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="PTr-s0-sNu">
+            <objects>
+                <tableViewController storyboardIdentifier="AccountVC" id="CaF-QU-Ohy" customClass="AccountViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="djM-y5-hSW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="YD5-ic-kT8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="81l-hj-RpV" rowHeight="101" style="IBUITableViewCellStyleDefault" id="8I9-uA-Ayq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8I9-uA-Ayq" id="9il-o7-SqV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SETTING GOAL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81l-hj-RpV" userLabel="SETTING GOAL">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.59645645059999997" green="0.70488283829999998" blue="0.72336632010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Pm6-ul-ZZ6" rowHeight="111" style="IBUITableViewCellStyleDefault" id="2eF-RZ-SRp">
+                                        <rect key="frame" x="0.0" y="101" width="375" height="111"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2eF-RZ-SRp" id="6m4-Jf-PWC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Create Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pm6-ul-ZZ6" userLabel="SETTING GOAL">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.59645645059999997" green="0.70488283829999998" blue="0.72336632010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="HU5-JT-uWx" rowHeight="127" style="IBUITableViewCellStyleDefault" id="WKY-6H-dov">
+                                        <rect key="frame" x="0.0" y="212" width="375" height="127"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WKY-6H-dov" id="nAM-iD-lJP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Give Us FeedBack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HU5-JT-uWx" userLabel="SETTING GOAL">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="126"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.59645645059999997" green="0.70488283829999998" blue="0.72336632010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="CaF-QU-Ohy" id="S48-7V-Qgm"/>
+                            <outlet property="delegate" destination="CaF-QU-Ohy" id="OTO-Lh-Nkj"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" image="person.png" id="7Ax-IZ-aGb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mum-1j-Jkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.5" y="700.5"/>
         </scene>
         <!--Article-->
         <scene sceneID="RJ7-yS-H7f">

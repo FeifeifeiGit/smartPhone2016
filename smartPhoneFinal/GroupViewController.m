@@ -7,6 +7,7 @@
 //
 
 #import "GroupViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface GroupViewController ()
 

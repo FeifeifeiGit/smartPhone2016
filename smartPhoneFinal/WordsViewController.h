@@ -11,21 +11,21 @@
 #import "ArticleStore+CoreDataProperties.h"
 #import "OnePassageViewController.h"
 #import "VocabularyViewController.h"
-#import "Notes+CoreDataProperties.h"
 
 @class ArticleStore;
 @class Inventory;
-@class Notes;
 
 @interface WordsViewController : UIViewController<UITextViewDelegate>
 - (IBAction)HomeButtonClicked:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *wordItem;
+@property NSInteger fetchLimit;
+
 - (IBAction)editNoteClicked:(id)sender;
 - (IBAction)saveNoteClicked:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UITextView *relatedArticles;
 
-
+@property NSInteger Completed;
 @property (strong, nonatomic) IBOutlet UITextView *NoteField;
 - (IBAction)dismissWhenClickBlank:(id)sender;
 
@@ -35,6 +35,7 @@
 
 - (IBAction)viewTheFullArticle:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *noteSavedLabel;
 
 
 @property NSManagedObjectContext *myContext;

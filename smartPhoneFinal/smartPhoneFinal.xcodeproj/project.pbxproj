@@ -9,13 +9,8 @@
 /* Begin PBXBuildFile section */
 		A5130E021E03398400E4722B /* EditNote.png in Resources */ = {isa = PBXBuildFile; fileRef = A5130E001E03398400E4722B /* EditNote.png */; };
 		A5130E031E03398400E4722B /* saveNote.png in Resources */ = {isa = PBXBuildFile; fileRef = A5130E011E03398400E4722B /* saveNote.png */; };
-		A5130E1D1E0392C400E4722B /* TodayPlan+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A5130E141E0392C400E4722B /* TodayPlan+CoreDataClass.m */; };
-		A5130E1E1E0392C400E4722B /* TodayPlan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A5130E161E0392C400E4722B /* TodayPlan+CoreDataProperties.m */; };
 		A5130E231E0393C100E4722B /* OnePassageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5130E211E0393C100E4722B /* OnePassageViewController.m */; };
 		A5130E241E0393C100E4722B /* OnePassageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5130E221E0393C100E4722B /* OnePassageViewController.xib */; };
-		A5130E501E03A23900E4722B /* ArticleStore+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A5130E4D1E03A23900E4722B /* ArticleStore+CoreDataClass.m */; };
-		A5130E511E03A23900E4722B /* ArticleStore+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A5130E4F1E03A23900E4722B /* ArticleStore+CoreDataProperties.m */; };
-		A5130E521E03AEE900E4722B /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A5130E041E03796200E4722B /* Model.xcdatamodeld */; };
 		A5130E651E03C99F00E4722B /* News article_001.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5130E551E03C99F00E4722B /* News article_001.txt */; };
 		A5130E661E03C99F00E4722B /* News article_002.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5130E561E03C99F00E4722B /* News article_002.txt */; };
 		A5130E671E03C99F00E4722B /* News article_003.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5130E571E03C99F00E4722B /* News article_003.txt */; };
@@ -32,10 +27,13 @@
 		A5130E721E03C99F00E4722B /* News article_014.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5130E621E03C99F00E4722B /* News article_014.txt */; };
 		A5130E731E03C99F00E4722B /* News article_015.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5130E631E03C99F00E4722B /* News article_015.txt */; };
 		A5130E741E03C99F00E4722B /* News article_016.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5130E641E03C99F00E4722B /* News article_016.txt */; };
-		A520164F1E049FD000A0A013 /* Notes+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A520164C1E049FD000A0A013 /* Notes+CoreDataClass.m */; };
-		A52016501E049FD000A0A013 /* Notes+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A520164E1E049FD000A0A013 /* Notes+CoreDataProperties.m */; };
-		A52016551E049FF700A0A013 /* Inventory+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016521E049FF700A0A013 /* Inventory+CoreDataClass.m */; };
-		A52016561E049FF700A0A013 /* Inventory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016541E049FF700A0A013 /* Inventory+CoreDataProperties.m */; };
+		A52016571E04D6DB00A0A013 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A5130E041E03796200E4722B /* Model.xcdatamodeld */; };
+		A520167C1E04EBB100A0A013 /* TodayPlan+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016711E04EBB100A0A013 /* TodayPlan+CoreDataClass.m */; };
+		A520167D1E04EBB100A0A013 /* TodayPlan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016731E04EBB100A0A013 /* TodayPlan+CoreDataProperties.m */; };
+		A520167E1E04EBB100A0A013 /* Inventory+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016751E04EBB100A0A013 /* Inventory+CoreDataClass.m */; };
+		A520167F1E04EBB100A0A013 /* Inventory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016771E04EBB100A0A013 /* Inventory+CoreDataProperties.m */; };
+		A52016801E04EBB100A0A013 /* ArticleStore+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A52016791E04EBB100A0A013 /* ArticleStore+CoreDataClass.m */; };
+		A52016811E04EBB100A0A013 /* ArticleStore+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A520167B1E04EBB100A0A013 /* ArticleStore+CoreDataProperties.m */; };
 		A58F45651E01E11900153E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A58F45641E01E11900153E66 /* main.m */; };
 		A58F45681E01E11900153E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A58F45671E01E11900153E66 /* AppDelegate.m */; };
 		A58F456B1E01E11900153E66 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58F456A1E01E11900153E66 /* LearnViewController.m */; };
@@ -84,17 +82,9 @@
 		A5130E001E03398400E4722B /* EditNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditNote.png; sourceTree = "<group>"; };
 		A5130E011E03398400E4722B /* saveNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveNote.png; sourceTree = "<group>"; };
 		A5130E051E03796200E4722B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		A5130E131E0392C400E4722B /* TodayPlan+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TodayPlan+CoreDataClass.h"; path = "DataModel/TodayPlan+CoreDataClass.h"; sourceTree = "<group>"; };
-		A5130E141E0392C400E4722B /* TodayPlan+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TodayPlan+CoreDataClass.m"; path = "DataModel/TodayPlan+CoreDataClass.m"; sourceTree = "<group>"; };
-		A5130E151E0392C400E4722B /* TodayPlan+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TodayPlan+CoreDataProperties.h"; path = "DataModel/TodayPlan+CoreDataProperties.h"; sourceTree = "<group>"; };
-		A5130E161E0392C400E4722B /* TodayPlan+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TodayPlan+CoreDataProperties.m"; path = "DataModel/TodayPlan+CoreDataProperties.m"; sourceTree = "<group>"; };
 		A5130E201E0393C100E4722B /* OnePassageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OnePassageViewController.h; path = ../OnePassageViewController.h; sourceTree = "<group>"; };
 		A5130E211E0393C100E4722B /* OnePassageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OnePassageViewController.m; path = ../OnePassageViewController.m; sourceTree = "<group>"; };
 		A5130E221E0393C100E4722B /* OnePassageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnePassageViewController.xib; path = ../OnePassageViewController.xib; sourceTree = "<group>"; };
-		A5130E4C1E03A23900E4722B /* ArticleStore+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArticleStore+CoreDataClass.h"; sourceTree = "<group>"; };
-		A5130E4D1E03A23900E4722B /* ArticleStore+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ArticleStore+CoreDataClass.m"; sourceTree = "<group>"; };
-		A5130E4E1E03A23900E4722B /* ArticleStore+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArticleStore+CoreDataProperties.h"; sourceTree = "<group>"; };
-		A5130E4F1E03A23900E4722B /* ArticleStore+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ArticleStore+CoreDataProperties.m"; sourceTree = "<group>"; };
 		A5130E551E03C99F00E4722B /* News article_001.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "News article_001.txt"; sourceTree = "<group>"; };
 		A5130E561E03C99F00E4722B /* News article_002.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "News article_002.txt"; sourceTree = "<group>"; };
 		A5130E571E03C99F00E4722B /* News article_003.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "News article_003.txt"; sourceTree = "<group>"; };
@@ -111,14 +101,18 @@
 		A5130E621E03C99F00E4722B /* News article_014.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "News article_014.txt"; sourceTree = "<group>"; };
 		A5130E631E03C99F00E4722B /* News article_015.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "News article_015.txt"; sourceTree = "<group>"; };
 		A5130E641E03C99F00E4722B /* News article_016.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "News article_016.txt"; sourceTree = "<group>"; };
-		A520164B1E049FD000A0A013 /* Notes+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Notes+CoreDataClass.h"; sourceTree = "<group>"; };
-		A520164C1E049FD000A0A013 /* Notes+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Notes+CoreDataClass.m"; sourceTree = "<group>"; };
-		A520164D1E049FD000A0A013 /* Notes+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Notes+CoreDataProperties.h"; sourceTree = "<group>"; };
-		A520164E1E049FD000A0A013 /* Notes+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Notes+CoreDataProperties.m"; sourceTree = "<group>"; };
-		A52016511E049FF700A0A013 /* Inventory+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Inventory+CoreDataClass.h"; sourceTree = "<group>"; };
-		A52016521E049FF700A0A013 /* Inventory+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Inventory+CoreDataClass.m"; sourceTree = "<group>"; };
-		A52016531E049FF700A0A013 /* Inventory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Inventory+CoreDataProperties.h"; sourceTree = "<group>"; };
-		A52016541E049FF700A0A013 /* Inventory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Inventory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A52016701E04EBB100A0A013 /* TodayPlan+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TodayPlan+CoreDataClass.h"; path = "DataModel/TodayPlan+CoreDataClass.h"; sourceTree = "<group>"; };
+		A52016711E04EBB100A0A013 /* TodayPlan+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TodayPlan+CoreDataClass.m"; path = "DataModel/TodayPlan+CoreDataClass.m"; sourceTree = "<group>"; };
+		A52016721E04EBB100A0A013 /* TodayPlan+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TodayPlan+CoreDataProperties.h"; path = "DataModel/TodayPlan+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A52016731E04EBB100A0A013 /* TodayPlan+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TodayPlan+CoreDataProperties.m"; path = "DataModel/TodayPlan+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A52016741E04EBB100A0A013 /* Inventory+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Inventory+CoreDataClass.h"; path = "DataModel/Inventory+CoreDataClass.h"; sourceTree = "<group>"; };
+		A52016751E04EBB100A0A013 /* Inventory+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Inventory+CoreDataClass.m"; path = "DataModel/Inventory+CoreDataClass.m"; sourceTree = "<group>"; };
+		A52016761E04EBB100A0A013 /* Inventory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Inventory+CoreDataProperties.h"; path = "DataModel/Inventory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A52016771E04EBB100A0A013 /* Inventory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Inventory+CoreDataProperties.m"; path = "DataModel/Inventory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A52016781E04EBB100A0A013 /* ArticleStore+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ArticleStore+CoreDataClass.h"; path = "DataModel/ArticleStore+CoreDataClass.h"; sourceTree = "<group>"; };
+		A52016791E04EBB100A0A013 /* ArticleStore+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ArticleStore+CoreDataClass.m"; path = "DataModel/ArticleStore+CoreDataClass.m"; sourceTree = "<group>"; };
+		A520167A1E04EBB100A0A013 /* ArticleStore+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ArticleStore+CoreDataProperties.h"; path = "DataModel/ArticleStore+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A520167B1E04EBB100A0A013 /* ArticleStore+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ArticleStore+CoreDataProperties.m"; path = "DataModel/ArticleStore+CoreDataProperties.m"; sourceTree = "<group>"; };
 		A58F45601E01E11900153E66 /* smartPhoneFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smartPhoneFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58F45641E01E11900153E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A58F45661E01E11900153E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,22 +190,18 @@
 		A5130E1F1E0392D000E4722B /* Data model */ = {
 			isa = PBXGroup;
 			children = (
-				A5130E4C1E03A23900E4722B /* ArticleStore+CoreDataClass.h */,
-				A5130E4D1E03A23900E4722B /* ArticleStore+CoreDataClass.m */,
-				A5130E4E1E03A23900E4722B /* ArticleStore+CoreDataProperties.h */,
-				A5130E4F1E03A23900E4722B /* ArticleStore+CoreDataProperties.m */,
-				A52016511E049FF700A0A013 /* Inventory+CoreDataClass.h */,
-				A52016521E049FF700A0A013 /* Inventory+CoreDataClass.m */,
-				A52016531E049FF700A0A013 /* Inventory+CoreDataProperties.h */,
-				A52016541E049FF700A0A013 /* Inventory+CoreDataProperties.m */,
-				A520164B1E049FD000A0A013 /* Notes+CoreDataClass.h */,
-				A520164C1E049FD000A0A013 /* Notes+CoreDataClass.m */,
-				A520164D1E049FD000A0A013 /* Notes+CoreDataProperties.h */,
-				A520164E1E049FD000A0A013 /* Notes+CoreDataProperties.m */,
-				A5130E131E0392C400E4722B /* TodayPlan+CoreDataClass.h */,
-				A5130E141E0392C400E4722B /* TodayPlan+CoreDataClass.m */,
-				A5130E151E0392C400E4722B /* TodayPlan+CoreDataProperties.h */,
-				A5130E161E0392C400E4722B /* TodayPlan+CoreDataProperties.m */,
+				A52016701E04EBB100A0A013 /* TodayPlan+CoreDataClass.h */,
+				A52016711E04EBB100A0A013 /* TodayPlan+CoreDataClass.m */,
+				A52016721E04EBB100A0A013 /* TodayPlan+CoreDataProperties.h */,
+				A52016731E04EBB100A0A013 /* TodayPlan+CoreDataProperties.m */,
+				A52016741E04EBB100A0A013 /* Inventory+CoreDataClass.h */,
+				A52016751E04EBB100A0A013 /* Inventory+CoreDataClass.m */,
+				A52016761E04EBB100A0A013 /* Inventory+CoreDataProperties.h */,
+				A52016771E04EBB100A0A013 /* Inventory+CoreDataProperties.m */,
+				A52016781E04EBB100A0A013 /* ArticleStore+CoreDataClass.h */,
+				A52016791E04EBB100A0A013 /* ArticleStore+CoreDataClass.m */,
+				A520167A1E04EBB100A0A013 /* ArticleStore+CoreDataProperties.h */,
+				A520167B1E04EBB100A0A013 /* ArticleStore+CoreDataProperties.m */,
 			);
 			name = "Data model";
 			sourceTree = "<group>";
@@ -420,7 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5130E521E03AEE900E4722B /* Model.xcdatamodeld in Resources */,
+				A52016571E04D6DB00A0A013 /* Model.xcdatamodeld in Resources */,
 				A5F75BB71E0310EE0055932E /* goodsPrice_d@2x.png in Resources */,
 				A5F75BBF1E0310EE0055932E /* tabbarBk@2x.png in Resources */,
 				A5F75BB11E0310EE0055932E /* einstin.png in Resources */,
@@ -476,30 +466,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52016801E04EBB100A0A013 /* ArticleStore+CoreDataClass.m in Sources */,
 				A5EA621E1E025620003C6CC8 /* DLFixedTabbarView.m in Sources */,
 				A5EA61F21E02489A003C6CC8 /* GroupViewController.m in Sources */,
+				A520167C1E04EBB100A0A013 /* TodayPlan+CoreDataClass.m in Sources */,
 				A58F456E1E01E11900153E66 /* ArticleViewController.m in Sources */,
-				A5130E511E03A23900E4722B /* ArticleStore+CoreDataProperties.m in Sources */,
-				A52016561E049FF700A0A013 /* Inventory+CoreDataProperties.m in Sources */,
+				A52016811E04EBB100A0A013 /* ArticleStore+CoreDataProperties.m in Sources */,
+				A520167F1E04EBB100A0A013 /* Inventory+CoreDataProperties.m in Sources */,
 				A5EA62201E025620003C6CC8 /* DLTabedSlideView.m in Sources */,
 				A5EA62241E02626C003C6CC8 /* AccountViewController.m in Sources */,
-				A5130E1E1E0392C400E4722B /* TodayPlan+CoreDataProperties.m in Sources */,
 				A5EA621D1E025620003C6CC8 /* DLSlideView.m in Sources */,
 				A5130E231E0393C100E4722B /* OnePassageViewController.m in Sources */,
 				A5EA61DA1E024297003C6CC8 /* ProgressViewController.m in Sources */,
-				A52016501E049FD000A0A013 /* Notes+CoreDataProperties.m in Sources */,
 				A5EA62211E025620003C6CC8 /* DLUtility.m in Sources */,
+				A520167D1E04EBB100A0A013 /* TodayPlan+CoreDataProperties.m in Sources */,
 				A5EA621F1E025620003C6CC8 /* DLScrollTabbarView.m in Sources */,
 				A5EA61D51E02426A003C6CC8 /* VocabularyViewController.m in Sources */,
-				A52016551E049FF700A0A013 /* Inventory+CoreDataClass.m in Sources */,
 				A5EA621C1E025620003C6CC8 /* DLCustomSlideView.m in Sources */,
 				A58F45681E01E11900153E66 /* AppDelegate.m in Sources */,
 				A58F456B1E01E11900153E66 /* LearnViewController.m in Sources */,
 				A5EA621B1E025620003C6CC8 /* DLLRUCache.m in Sources */,
-				A5130E501E03A23900E4722B /* ArticleStore+CoreDataClass.m in Sources */,
-				A5130E1D1E0392C400E4722B /* TodayPlan+CoreDataClass.m in Sources */,
-				A520164F1E049FD000A0A013 /* Notes+CoreDataClass.m in Sources */,
 				A5F75BC31E0320AD0055932E /* WordsViewController.m in Sources */,
+				A520167E1E04EBB100A0A013 /* Inventory+CoreDataClass.m in Sources */,
 				A58F45651E01E11900153E66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSDate *lastDate;
 @property (nonatomic) int16_t stage;
 @property (nullable, nonatomic, copy) NSString *word;
-@property (nullable, nonatomic, retain) Notes *notesList;
+@property (nullable, nonatomic, copy) NSString *note;
 @property (nullable, nonatomic, retain) ArticleStore *relatedArticle;
 
 @end

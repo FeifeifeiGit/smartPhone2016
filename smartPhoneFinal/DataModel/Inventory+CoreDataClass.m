@@ -9,7 +9,6 @@
 
 #import "Inventory+CoreDataClass.h"
 #import "ArticleStore+CoreDataClass.h"
-#import "Notes+CoreDataClass.h"
 @implementation Inventory
 
 @end

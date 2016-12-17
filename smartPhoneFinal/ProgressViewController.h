@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ProgressViewController : UIViewController
-
+@property NSManagedObjectContext *myContext;
 @end

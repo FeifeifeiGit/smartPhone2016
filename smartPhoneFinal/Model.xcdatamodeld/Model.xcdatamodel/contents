@@ -9,21 +9,17 @@
         <attribute name="done" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fisrtDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lastDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" defaultValueString="note" syncable="YES"/>
         <attribute name="stage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="notesList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notes" syncable="YES"/>
         <relationship name="relatedArticle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArticleStore" syncable="YES"/>
-    </entity>
-    <entity name="Notes" representedClassName="Notes" syncable="YES" codeGenerationType="class">
-        <attribute name="noteContent" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="TodayPlan" representedClassName="TodayPlan" syncable="YES" codeGenerationType="class">
         <relationship name="todaywords" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Inventory" syncable="YES"/>
     </entity>
     <elements>
         <element name="ArticleStore" positionX="-270" positionY="-99" width="128" height="90"/>
-        <element name="Inventory" positionX="-117" positionY="117" width="128" height="150"/>
-        <element name="Notes" positionX="115" positionY="165" width="128" height="60"/>
+        <element name="Inventory" positionX="-117" positionY="117" width="128" height="148"/>
         <element name="TodayPlan" positionX="178" positionY="75" width="128" height="60"/>
     </elements>
 </model>

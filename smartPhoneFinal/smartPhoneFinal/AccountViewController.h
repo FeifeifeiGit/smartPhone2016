@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DLTabedSlideView.h"
 
-@interface AccountViewController : UIViewController
+@interface AccountViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 
 
 @end

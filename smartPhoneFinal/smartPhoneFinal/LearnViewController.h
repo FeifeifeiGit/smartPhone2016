@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "DLTabedSlideView.h"
- 
+#import "ArticleViewController.h"
+
 @interface LearnViewController : UIViewController<DLTabedSlideViewDelegate>
 @property (weak, nonatomic) IBOutlet DLTabedSlideView *tabedSlideView;
-
+@property NSManagedObjectContext *myContext;
 
 
 @end

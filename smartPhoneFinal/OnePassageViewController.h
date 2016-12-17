@@ -10,15 +10,17 @@
 #import "Inventory+CoreDataClass.h"
 #import "Inventory+CoreDataProperties.h"
 #import "WordsViewController.h"
-
 #import <CoreData/CoreData.h>
+
 @class ArticleStore;
+
 
 @interface OnePassageViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *passageView;
-@property (strong, nonatomic) Inventory *wordToAdd;
+@property NSString *wordToAdd;
 @property NSManagedObjectContext *myContext;
 @property (weak,nonatomic) ArticleStore *selctedPassage;
 
+- (IBAction)backTowords:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ProgressViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface ProgressViewController ()
 

@@ -11,7 +11,8 @@
 #import "AccountViewController.h"
 
 @interface AccountViewController ()
-
+-(void)setGoal:(NSInteger) num;
+-(void)validateNUM:(NSString*) numinput;
 @end
 
 @implementation AccountViewController
@@ -28,7 +29,47 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 3;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.row==0){
+        UIAlertController* newWordAlert = [UIAlertController alertControllerWithTitle:@"Set Your Daily Goal" message:@"Enter the number of the words." preferredStyle:UIAlertControllerStyleAlert];
+        
+        [newWordAlert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.placeholder = @"50";
+            textField.textColor = [UIColor blueColor];
+            textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            textField.borderStyle = UITextBorderStyleRoundedRect;
+        }];
+        
+        UIAlertAction* saveGoalAction = [UIAlertAction actionWithTitle:@"SET" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+            NSArray * textfields = newWordAlert.textFields;
+            UITextField * wordfield = textfields[0];
+            [self validateNUM:wordfield.text];
+            [self setGoal:[wordfield.text intValue]];
+        }];
+        [newWordAlert addAction:saveGoalAction];
+        [self presentViewController:newWordAlert animated:YES completion:nil];
+    }
+}
+-(void)setGoal:(NSInteger) num{
+
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:num forKey:@"DailyGoal"];
+    [userDefaults synchronize];
+}
+-(void)validateNUM:(NSString*) numinput{
+    
+}
 
 /*
  #pragma mark - Navigation

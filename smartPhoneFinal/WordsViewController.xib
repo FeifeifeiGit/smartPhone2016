@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WordsViewController">
             <connections>
                 <outlet property="NoteField" destination="4Dx-x3-AvC" id="B1r-hf-O5l"/>
+                <outlet property="noteSavedLabel" destination="eiU-Vh-CI3" id="Du2-AP-V8y"/>
                 <outlet property="relatedArticles" destination="kiG-fQ-Wka" id="BiH-mR-04P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wordItem" destination="NN4-hH-K8v" id="4y0-24-es1"/>
@@ -126,6 +127,13 @@
                         <action selector="viewTheFullArticle:" destination="-1" eventType="touchUpInside" id="zOb-7h-OaR"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eiU-Vh-CI3" userLabel="noteSavedlabel">
+                    <rect key="frame" x="35" y="311" width="233" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="32.5" y="68.5"/>

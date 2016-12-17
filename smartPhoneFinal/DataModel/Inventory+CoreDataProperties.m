@@ -20,7 +20,7 @@
 @dynamic lastDate;
 @dynamic stage;
 @dynamic word;
-@dynamic notesList;
+@dynamic note;
 @dynamic relatedArticle;
 
 @end
