@@ -35,7 +35,7 @@
     //build the connection to core data
     [self buildConnection];
     //initialize files to article: name, catagory
-  // [self initializeArticle];
+   //[self initializeArticle];
 //     [self addArticlesToStore:@"News article_005" withSumary:@"Age-related macular degeneration (AMD) is a painless eye condition that causes you to lose central vision, usually in both eyes" inCategory:_category[1]];
     //fecth all the articles
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"ArticleStore"];

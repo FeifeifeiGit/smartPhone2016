@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A381378E1EBFD822E0751947AB983BE3F039504F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ABBC29B0DBA23FF98210CC04F237C8AA532E10C1" : 9223372036854775807,
+    "A381378E1EBFD822E0751947AB983BE3F039504F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BAEA5B6A-5B47-4432-AA11-BB867E7F2BD6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ABBC29B0DBA23FF98210CC04F237C8AA532E10C1" : "smartPhone2016\/smartPhoneFinal\/PNChart\/",
+    "A381378E1EBFD822E0751947AB983BE3F039504F" : "smartPhone2016\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "smartPhoneFinal",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "smartPhoneFinal\/smartPhoneFinal.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/FeifeifeiGit\/smartPhone2016.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A381378E1EBFD822E0751947AB983BE3F039504F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kevinzhow\/PNChart.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ABBC29B0DBA23FF98210CC04F237C8AA532E10C1"
+    }
+  ]
+}

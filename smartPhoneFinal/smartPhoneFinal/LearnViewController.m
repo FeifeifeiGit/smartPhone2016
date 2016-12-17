@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     self.tabedSlideView.baseViewController = self;
     self.tabedSlideView.tabItemNormalColor = [UIColor blackColor];
     self.tabedSlideView.tabItemSelectedColor = [UIColor colorWithRed:0.833 green:0.052 blue:0.130 alpha:1.000];
@@ -37,16 +38,16 @@
     DLTabedbarItem *item3 = [DLTabedbarItem itemWithTitle:@"Group" image:[UIImage imageNamed:@"group"] selectedImage:[UIImage imageNamed:@"group"]];
     self.tabedSlideView.tabbarItems = @[item1, item2, item3];
     [self.tabedSlideView buildTabbar];
-    
     self.tabedSlideView.selectedIndex = 0;
-    UINavigationController *articleNavi =[[self.tabBarController viewControllers] objectAtIndex:0] ;
-    ArticleViewController *articleVC = (ArticleViewController*)[articleNavi topViewController];
-    _myContext = articleVC.myContext;
-    _ctrl.myContext = _myContext;
-    _ctrl2.myContext = _myContext;
-    _ctrl3.myContext = _myContext;
+//    UINavigationController *articleNavi =[[self.tabBarController viewControllers] objectAtIndex:0] ;
+//    ArticleViewController *articleVC = (ArticleViewController*)[articleNavi topViewController];
+//    _myContext = articleVC.myContext;
+
+//    _ctrl.myContext = _myContext;
+//    _ctrl2.myContext = _myContext;
+//    _ctrl3.myContext = _myContext;
     NSLog(@"learningVC myContex: %@", _myContext);
-    NSLog(@"Learn view Controller view load is called");
+    NSLog(@"LearnViewController viewwillload is called");
     
    }
 
@@ -60,11 +61,17 @@
     return 3;
 }
 - (UIViewController *)DLTabedSlideView:(DLTabedSlideView *)sender controllerAt:(NSInteger)index{
+    NSLog(@" DLTabedSlideView is called");
+    UINavigationController *articleNavi =[[self.tabBarController viewControllers] objectAtIndex:0] ;
+    ArticleViewController *articleVC = (ArticleViewController*)[articleNavi topViewController];
+    _myContext = articleVC.myContext;
+
+    
     switch (index) {
         case 0:
         {
            _ctrl= [[VocabularyViewController alloc] init];
-           
+           _ctrl.myContext = _myContext;
             NSLog(@"vocabVC mycontext: %@", _ctrl.myContext);
             return _ctrl;
         }

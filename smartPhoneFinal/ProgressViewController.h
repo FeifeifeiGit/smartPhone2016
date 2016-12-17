@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ProgressViewController : UIViewController
+- (IBAction)clearRecord:(id)sender;
+
+- (IBAction)createRecord:(id)sender;
+
 @property NSManagedObjectContext *myContext;
 @end

@@ -100,6 +100,7 @@
 }
 -(void)saveNewWord:(NSString*) newNote{
     NSLog(@" saveNewWord is called: newword is %@", _wordToAdd  );
+    NSDate *testDate ;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Inventory"];
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"word = %@",
                         _wordToAdd];

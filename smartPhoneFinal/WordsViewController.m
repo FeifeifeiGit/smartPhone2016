@@ -7,11 +7,12 @@
 //
 
 #import "WordsViewController.h"
-
+#import "Completion+CoreDataProperties.h"
 
 @interface WordsViewController ()
 -(void)loadTodayPlan;
 -(void)doAnimation;
+-(void)saveCompletion:(NSDate*) dateCompltion;
 @property (strong,nonatomic) NSDate *testDate;
 @property Boolean isnewWord;
 @property NSArray *intervals ;
@@ -47,13 +48,32 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
-    NSLog(@"here is viewWillApear: currentWord is %@", _currentWord.word);
+    NSLog(@"here is wordsVC viewWillApear: currentWord is %@", _currentWord.word);
         _wordItem.text=_currentWord.word;
         _NoteField.text=_currentWord.note;
         _relatedArticles.text= _currentWord.relatedArticle.summary;
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
 
+    //save today's completion
+    NSDate *date= [NSDate date];
+    [self saveCompletion: date];
+}
+-(void)saveCompletion:(NSDate*) dateCompltion{
+  Completion  *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Completion" inManagedObjectContext:_myContext];
+    newItem.date = dateCompltion;
+    newItem.number = _Completed;
+    NSError *error = nil;
+    if([_myContext hasChanges]){
+        [_myContext save:&error];
+    }
+    if (error) {
+        NSLog(@"%@",error);
+    }
+    
+    NSLog(@"%hd is added to completed, its date is : %@",newItem.number,newItem.date);
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -102,7 +122,7 @@
 
 -(void)loadTodayPlan{
     NSLog(@"loadTodayPlan is called");
- NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Inventory"];
+  NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Inventory"];
    NSPredicate *pre = [NSPredicate predicateWithFormat:@"done == %d",
                         0];
     request.predicate = pre;
@@ -111,7 +131,7 @@
     NSError *error = nil;
     NSArray *allwords = [_myContext executeFetchRequest:request error:&error];
     NSLog(@"size of all fecthed words: %lu", (unsigned long)[allwords count]);
-    NSDate *today = [NSDate date];
+ //   NSDate *today = [NSDate date];
     if (error) {
         NSLog(@"error");
     }
