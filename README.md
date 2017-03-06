@@ -8,3 +8,4 @@ English Vocabulary builder:
   5. select "already knew" the words label will increase by 1, if the label reaches 5, no need to learn again.
   
   ![img](https://github.com/FeifeifeiGit/smartPhone2016/blob/master/vocabularyBuilder-1.gif)
+  ![img(https://github.com/FeifeifeiGit/smartPhone2016/blob/master/vocabularyBuilder-2.gif)]
