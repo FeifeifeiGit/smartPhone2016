@@ -116,11 +116,20 @@
         }else{
         Inventory *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Inventory" inManagedObjectContext:_myContext];
         newItem.word = _wordToAdd;
-        newItem.stage = 0;
+        newItem.stage = 1;
         NSDate *currDate = [NSDate date];
-            //change first and last date to test
-        newItem.fisrtDate =currDate;
+        //change first and last date to test
+            //4492800  52day
+            //5184000 60day
+        NSDate *first = [NSDate dateWithTimeIntervalSinceNow: 432000];
+        NSDate *last = [NSDate dateWithTimeIntervalSinceNow: 172800];
+            newItem.fisrtDate =first;
+            newItem.lastDate = last;
+
+         //actual code
+     /*   newItem.fisrtDate =currDate;
         newItem.lastDate = currDate;
+      */
         newItem.note = newNote;
         newItem.done = NO;
         newItem.relatedArticle = _selctedPassage;

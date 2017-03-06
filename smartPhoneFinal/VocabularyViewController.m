@@ -21,11 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //[self setTodayWord];
+    [self setTodayWord];
+    [self updateCompletedNum];
+    [self updateTotalDaysAndWords];
     NSLog(@"Vocab vc viewDidLoad.  context is :%@",self.myContext);
 }
 -(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"vocabVC viewillappear is called here, the completed num is :%@", _wordsCompletedToday.text);
      [self setTodayWord];
-    [self updateCompletedNum];
+     [self updateCompletedNum];
      [self updateTotalDaysAndWords];
 }
 
@@ -40,8 +44,8 @@
     [self presentViewController:newWords animated:YES completion:nil];
 }
 -(void)updateCompletedNum{
-    WordsViewController *t = (WordsViewController*)self.presentedViewController;
-    NSInteger numOfcompletedT;
+ //   WordsViewController *t = (WordsViewController*)self.presentedViewController;
+   // NSInteger numOfcompletedT;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Completion"];
     NSDate *testDate ;//testDate should be the curDate, but for test you can set to change
    // testDate = [NSDate dateWithTimeIntervalSinceNow: 604800];//7 days ago
@@ -52,16 +56,15 @@
     NSError *error;
     NSArray *allwords = [_myContext executeFetchRequest:request error:&error];
     if([allwords class]==[NSNull class]||[allwords count]==0){
-        numOfcompletedT = 0;
+        _wordsCompletedToday.text = @"0";
     }else{
             Completion *curComplet = [allwords firstObject];
-            numOfcompletedT = curComplet.number;
+            _wordsCompletedToday.text = [NSString stringWithFormat:@"%ul", curComplet.number];
+        NSLog(@"today's completed num: %@", _wordsCompletedToday.text);
     }
     if (error) {
         NSLog(@"%@",error);
     }
-_wordsCompletedToday.text =[ NSString stringWithFormat:@"%ld",numOfcompletedT];
-    NSLog(@"update completion for date:%@, completed num is : %ld ", testDate, (long)numOfcompletedT);
 }
 /*
 #pragma mark - Navigation
@@ -82,7 +85,7 @@ _wordsCompletedToday.text =[ NSString stringWithFormat:@"%ld",numOfcompletedT];
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Inventory"];
     NSError *error = nil;
     NSArray *allwords = [_myContext executeFetchRequest:request error:&error];
-    NSLog(@"allwords object is %@, count is : %d", [allwords class], [allwords count]);
+    NSLog(@"allwords object is %@, count is : %lul", [allwords class], (unsigned long)[allwords count]);
 
     if(([allwords class]==[NSNull class])||([allwords count]==0)){
         _totalWords.text=0;

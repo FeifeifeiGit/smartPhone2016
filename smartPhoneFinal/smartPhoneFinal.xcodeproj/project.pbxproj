@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76BF5CAC3B5911C2A21905E1 /* libPods-smartPhoneFinal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AA795CEB82BE3498111C5E /* libPods-smartPhoneFinal.a */; };
 		A5130E021E03398400E4722B /* EditNote.png in Resources */ = {isa = PBXBuildFile; fileRef = A5130E001E03398400E4722B /* EditNote.png */; };
 		A5130E031E03398400E4722B /* saveNote.png in Resources */ = {isa = PBXBuildFile; fileRef = A5130E011E03398400E4722B /* saveNote.png */; };
 		A5130E231E0393C100E4722B /* OnePassageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5130E211E0393C100E4722B /* OnePassageViewController.m */; };
@@ -100,6 +101,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46AA795CEB82BE3498111C5E /* libPods-smartPhoneFinal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-smartPhoneFinal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E1A48E9FEA18600BCA8BD5 /* Pods-smartPhoneFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPhoneFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-smartPhoneFinal/Pods-smartPhoneFinal.release.xcconfig"; sourceTree = "<group>"; };
 		A5130E001E03398400E4722B /* EditNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditNote.png; sourceTree = "<group>"; };
 		A5130E011E03398400E4722B /* saveNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveNote.png; sourceTree = "<group>"; };
 		A5130E051E03796200E4722B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -235,6 +238,7 @@
 		A5F75BC11E0320AD0055932E /* WordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordsViewController.m; path = ../WordsViewController.m; sourceTree = "<group>"; };
 		A5F75BC21E0320AD0055932E /* WordsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WordsViewController.xib; path = ../WordsViewController.xib; sourceTree = "<group>"; };
 		A5F75BC51E0323170055932E /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		B9B6CE2D9173128588B94CCA /* Pods-smartPhoneFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartPhoneFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smartPhoneFinal/Pods-smartPhoneFinal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,12 +250,22 @@
 				A520172A1E05798900A0A013 /* CoreGraphics.framework in Frameworks */,
 				A52017281E05797800A0A013 /* UIKit.framework in Frameworks */,
 				A52017261E05796B00A0A013 /* Foundation.framework in Frameworks */,
+				76BF5CAC3B5911C2A21905E1 /* libPods-smartPhoneFinal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C5421A0680650E38E39D13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6CE2D9173128588B94CCA /* Pods-smartPhoneFinal.debug.xcconfig */,
+				47E1A48E9FEA18600BCA8BD5 /* Pods-smartPhoneFinal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A5130E1F1E0392D000E4722B /* Data model */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +335,7 @@
 				A52017291E05798900A0A013 /* CoreGraphics.framework */,
 				A52017271E05797800A0A013 /* UIKit.framework */,
 				A52017251E05796B00A0A013 /* Foundation.framework */,
+				46AA795CEB82BE3498111C5E /* libPods-smartPhoneFinal.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -336,6 +351,7 @@
 				A58F45621E01E11900153E66 /* smartPhoneFinal */,
 				A58F45611E01E11900153E66 /* Products */,
 				A52017241E05796A00A0A013 /* Frameworks */,
+				39C5421A0680650E38E39D13 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -480,9 +496,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58F457A1E01E11900153E66 /* Build configuration list for PBXNativeTarget "smartPhoneFinal" */;
 			buildPhases = (
+				4ED4FD8AB80E8A14B5B5A7B4 /* [CP] Check Pods Manifest.lock */,
 				A58F455C1E01E11900153E66 /* Sources */,
 				A58F455D1E01E11900153E66 /* Frameworks */,
 				A58F455E1E01E11900153E66 /* Resources */,
+				1FD2C8ADC8084BFA3FED9DCE /* [CP] Embed Pods Frameworks */,
+				D321687695762D8590D629D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -581,6 +600,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FD2C8ADC8084BFA3FED9DCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-smartPhoneFinal/Pods-smartPhoneFinal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ED4FD8AB80E8A14B5B5A7B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D321687695762D8590D629D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-smartPhoneFinal/Pods-smartPhoneFinal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A58F455C1E01E11900153E66 /* Sources */ = {
@@ -743,6 +810,7 @@
 		};
 		A58F457B1E01E11900153E66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9B6CE2D9173128588B94CCA /* Pods-smartPhoneFinal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -755,6 +823,7 @@
 		};
 		A58F457C1E01E11900153E66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47E1A48E9FEA18600BCA8BD5 /* Pods-smartPhoneFinal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

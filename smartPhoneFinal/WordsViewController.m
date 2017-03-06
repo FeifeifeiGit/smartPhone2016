@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     NSLog(@"viewDidLoad is called");
-    _Completed=0;
     _intervals = [NSArray  arrayWithObjects:@"1", @"3",@"7",@"11",@"17",nil];
     [super viewDidLoad];
     //_NoteField.delegate=self;
@@ -59,20 +58,39 @@
     //save today's completion
     NSDate *date= [NSDate date];
     [self saveCompletion: date];
+    NSLog(@"willdisapear is called");
 }
 -(void)saveCompletion:(NSDate*) dateCompltion{
-  Completion  *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Completion" inManagedObjectContext:_myContext];
-    newItem.date = dateCompltion;
-    newItem.number = _Completed;
-    NSError *error = nil;
-    if([_myContext hasChanges]){
-        [_myContext save:&error];
-    }
-    if (error) {
-        NSLog(@"%@",error);
-    }
     
-    NSLog(@"%hd is added to completed, its date is : %@",newItem.number,newItem.date);
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Completion"];
+    NSPredicate  *predict = [NSPredicate predicateWithFormat:@"date = %@",
+                                    [NSDate date]];
+    request.predicate = predict;
+    NSError *error;
+    NSArray *todaysComplettionItems = [_myContext executeFetchRequest:request error:&error];
+    if([todaysComplettionItems count]>0){
+        Completion *updateToday = [todaysComplettionItems firstObject];
+        updateToday.number=_Completed;
+        NSError *error = nil;
+        if([_myContext hasChanges]){
+            [_myContext save:&error];
+        }
+        if (error) {
+            NSLog(@"%@",error);
+        }
+    }else{
+        Completion  *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"Completion" inManagedObjectContext:_myContext];
+        newItem.date = dateCompltion;
+        newItem.number = _Completed;
+        NSError *error = nil;
+        if([_myContext hasChanges]){
+            [_myContext save:&error];
+        }
+        if (error) {
+            NSLog(@"%@",error);
+        }
+        NSLog(@"%hd is added to completed, its date is : %@",newItem.number,newItem.date);
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -213,6 +231,8 @@
     [_todayWords removeObject:_currentWord];
     [self viewWillAppear:YES];
      _Completed++;
+    
+    [self saveCompletion: [NSDate date]];
     [ self  doAnimation];
 }
 
@@ -243,6 +263,7 @@
     [_todayWords removeObject:_currentWord];
     _Completed++;
     [self viewWillAppear:YES];
+    [self saveCompletion: [NSDate date]];
     [ self  doAnimation];
 }
 
