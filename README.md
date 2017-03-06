@@ -7,6 +7,7 @@ English Vocabulary builder:
   4. select "learn again", the words will add to your next task
   5. select "already knew" the words label will increase by 1, if the label reaches 5, no need to learn again.
 ------------------------------------------------------------------------------------------------------------------------
+
   The following gif is reading article and add words into user's inventory
   ![img](https://github.com/FeifeifeiGit/smartPhone2016/blob/master/vocabularyBuilder-1.gif)
   
